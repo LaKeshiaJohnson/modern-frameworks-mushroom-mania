@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mushroom Mania</title>
+	</head>
+	<body ng-app="MushroomApp">
+		<h1>Mushroom Mania</h1>
+			<!-- <input type="text" ng-model="searchText" size="60">
+			<div ng-repeat="item in mushrooms | filter: searchText"></div>
+			<br><br>
+			<input type="radio">Poisonous<br>
+			<input type="radio">Non-poisonous
+			<br> -->
+
+			<div ng-view></div>
+
+
+		<script src="lib/node_modules/angular/angular.min.js"></script>
+		<script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/factories/MushroomFactory.js"></script>
+		<script src="app/controllers/MushroomCtrl.js"></script>
+		
+	</body>
+</html>
