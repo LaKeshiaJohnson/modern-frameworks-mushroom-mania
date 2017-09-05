@@ -5,11 +5,11 @@ app.factory("MushroomFactory", function($q, $http) {
 	let getMushrooms = () => {
 		let items = [];
 		return $q ((resolve, reject) => {
-			$http.get(`./data/mushrooms.json`)
+			$http.get(`https://general-69f08.firebaseio.com/mushrooms.json`)
 			.then((itemObject) => {
 				let itemCollection = itemObject.data;
 
-				resolve(itemCollection.mushrooms);
+				resolve(itemCollection);
 			})
 			.catch((error) => {
 				reject(error);
