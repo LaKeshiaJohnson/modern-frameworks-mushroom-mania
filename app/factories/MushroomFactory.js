@@ -5,7 +5,7 @@ app.factory("MushroomFactory", function($q, $http) {
 	let getMushrooms = () => {
 		let items = [];
 		return $q ((resolve, reject) => {
-			$http.get('./data/mushrooms.json')
+			$http.get(`./data/mushrooms.json`)
 			.then((itemObject) => {
 				let itemCollection = itemObject.data;
 
@@ -17,9 +17,10 @@ app.factory("MushroomFactory", function($q, $http) {
 		});
 	};
 
-	/*let getOneMushroom = () => {
-		console.log("getOneMushroom");
-	};*/
+	
 
 	return {getMushrooms};
 });
+
+//./data/mushrooms.json
+//https://general-69f08.firebaseio.com/mushrooms.json
