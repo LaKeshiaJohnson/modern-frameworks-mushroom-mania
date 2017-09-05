@@ -7,5 +7,6 @@ app.config(function($routeProvider) {
 	when('/', {
 		templateUrl: 'partials/mushroom-list.html',
 		controller: "MushroomCtrl"
-	});
+	}).
+	otherwise('/');
 });
